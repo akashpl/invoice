@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 import { deleteInvoice, Updatepost, fetchproduct } from '../config/Myservice';
 import { Button,  Grid } from '@mui/material';
 
-export default function Dashboard() {
+export default function Dash() {
     const navigate = useNavigate()
     const [refresh, setrefresh] = useState(true)
     const[flag,setFlag]=useState();

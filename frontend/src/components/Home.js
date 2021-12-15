@@ -4,11 +4,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { Link } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import CreateInvoice from './CreateInvoice';
+import Dash from './Dash';
+import Invoicecreate from './invoicecreate';
 import Invoices from './Invoices';
-import Settings from './Settings';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,24 +51,20 @@ export default function Home() {
   return (
     <Box sx={{ borderBottom: 1, borderColor: 'divider' }} >
       <Tabs style={{backgroundColor:"lightblue"}} value={value} onChange={handleChange} aria-label="basic tabs example">
-        <Tab label="Dashboard" {...a11yProps(0)} />
-        <Tab label="Create Invoice" {...a11yProps(1)} />
-        <Tab label="Invoices" {...a11yProps(2)} />
-        {/* <Tab label="Settings" {...a11yProps(4)} /> */}
+        <Tab label="Home" {...a11yProps(0)} />
+        <Tab label="New Invoice" {...a11yProps(1)} />
+        <Tab label="preview Invoices" {...a11yProps(2)} />
+    
       </Tabs>
       <TabPanel value={value} index={0}>
-        <Dashboard />
+        <Dash />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <CreateInvoice />
+        <Invoicecreate />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Invoices />
       </TabPanel>
-      {/* <TabPanel value={value} index={3}>
-        <Settings />
-      </TabPanel> */}
-
 
     </Box>
   );

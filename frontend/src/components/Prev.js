@@ -16,7 +16,7 @@ const options = {
 }
 
 
-export default function Preview() {
+export default function Prev() {
     const { state } = useLocation();
     console.log(state)
     const ref = React.createRef();

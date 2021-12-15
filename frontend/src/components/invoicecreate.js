@@ -9,7 +9,7 @@ const regForEmail = RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 const regForName = RegExp(/^[A-Za-z]{2,50}$/);
 const regForAdd = RegExp(/^[A-Za-z0-9]{2,150}$/);
 
-export default function CreateInvoice() {
+export default function Invoicecreate() {
     const rname = useRef(null)
     const raddress = useRef(null)
     const remail = useRef(null)
